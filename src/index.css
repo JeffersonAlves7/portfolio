@@ -3,3 +3,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+  margin: 0 auto;
+  width: 90%;
+}
+
+#ball-and-content{
+  background-image: linear-gradient(to top, #0077B7 0%, white 60%);
+}
+
+.end-of-page{
+  position: absolute;
+  display: inherit;
+  width: 90vw;
+  height: 20vh;
+  border-radius: 100%;
+  background-image: linear-gradient(to top, black, white);
+  opacity: 0.5;
+  bottom: -15vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (prefers-color-scheme: dark) {
+  #ball-and-content{
+    background-image: linear-gradient(to top, #9039FF 0%, black 60%);
+  }
+  .end-of-page{
+    background-image: linear-gradient(to top, white, black);
+  }
+}
