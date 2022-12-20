@@ -1,6 +1,8 @@
+import { classParser } from "../../hook/classParser"
+
 export const MyProjects = function () {
-  const Classes = `
-    font-[Ubuntu Mono] 
+  const classes = `
+    font-ubuntu 
     dark:bg-black 
     dark:text-purple
     bg-[#fff]
@@ -15,7 +17,7 @@ export const MyProjects = function () {
 
   return (
     <a href="#projects">
-      <button className={Classes}>
+      <button className={classParser(classes)}>
         My Projects
       </button>
     </a>

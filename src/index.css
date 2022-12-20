@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+  .text-other-color{
+    @apply dark:text-purple text-blue
+  }
+}
+
 .container{
   margin: 0 auto;
   width: 90%;
@@ -17,11 +23,12 @@
   position: absolute;
   display: inherit;
   width: 90vw;
+  max-width: 100%;
   height: 20vh;
   border-radius: 100%;
   background-image: linear-gradient(to top, black, white);
   opacity: 0.5;
-  bottom: -15vh;
+  bottom: -15%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -30,7 +37,8 @@
   #ball-and-content{
     background-image: linear-gradient(to top, #9039FF 0%, black 60%);
   }
+
   .end-of-page{
-    background-image: linear-gradient(to top, white, black);
+    background-image: linear-gradient(to top, white 0%, black 93%);
   }
 }

@@ -1,7 +1,8 @@
+import { classParser } from "../../hook/classParser"
 import { MyProjects } from "../MyProjects"
 
 export const BallSection = function () {
-  const BallClass = `
+  const ballClass = `
     h-[78vw] 
     w-[78vw] 
     min-h-[19rem]
@@ -12,13 +13,14 @@ export const BallSection = function () {
     hover:scale-105
     transition-all
   ` 
+
   return (
-    <section id="ball-and-content" className={BallClass + ' flex items-center justify-center p-8'}>
+    <section id="ball-and-content" className={classParser(ballClass) + ' flex items-center justify-center p-8'}>
       <div className="flex flex-col gap-6 justify-center w-full h-full">
-        <div className="dark:text-[#fff] text-black text-xl font-[Loras] max-w-max">
-          <p>My <span className="dark:text-purple text-blue">name</span> is</p>
+        <div className="dark:text-[#fff] text-black text-xl font-loras max-w-max">
+          <p>My <span className=" text-other-color">name</span> is</p>
           <p className=" text-3xl">Jefferson Alves,</p>
-          <p>Full Stack Developer & Designer.</p>
+          <p>A Brazilian Full Stack Developer <span className=" text-other-color">&</span> Designer.</p>
         </div>
         <MyProjects/>
       </div>
